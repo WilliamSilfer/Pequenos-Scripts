@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class CadastroSistema {
     private static void salvarEventosEmArquivo(List<Evento> eventos) {
-        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("events.data"))) {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("C:\\Users\\walli\\IdeaProjects\\programafacul\\src\\events.data"))) {
             outputStream.writeObject(eventos);
             System.out.println("Eventos salvos com sucesso!");
         } catch (IOException e) {
@@ -147,7 +147,7 @@ public class CadastroSistema {
                     System.out.println("Saindo do sistema...");
                     scanner.close();
 
-                    GerenciadorArquivo.salvarEventos(listaEventos, "events.data");
+                    GerenciadorArquivo.salvarEventos(listaEventos, "C:\\Users\\walli\\IdeaProjects\\programafacul\\src\\events.data");
                     System.exit(0);
                     System.exit(0);
                 default:
